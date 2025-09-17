@@ -19,5 +19,14 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+     # Web application endpoints:
+     # These URLs handle the pages and features people use through their browsers.
+     # For example, the 'students/' path loads the students app, showing HTML pages, forms, etc.
     path('students/', include('students.urls')),
+    #API endpoints:
+    # These URLs provide data and services that other programs or apps can use,
+    # usually returning data in formats like JSON.
+    # APIs allow different software to communicate with your application
+    path('api/v1/', include('api.urls')),
+
 ]
