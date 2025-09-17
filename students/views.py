@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse,JsonResponse
+from django.http import HttpResponse
 # Create your views here.
 
 def students(request):
@@ -23,4 +23,4 @@ def students(request):
                 'course': 'Mechanical Engineering'
             }
     ]
-    return JsonResponse(data, safe=False)
+    return HttpResponse(data)
